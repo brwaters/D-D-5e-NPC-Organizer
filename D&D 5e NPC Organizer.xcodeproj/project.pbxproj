@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA58E5D9222A284500549C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5D8222A284500549C24 /* AppDelegate.swift */; };
+		DA58E5DB222A284500549C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5DA222A284500549C24 /* ViewController.swift */; };
+		DA58E5DE222A284500549C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E5DC222A284500549C24 /* Main.storyboard */; };
+		DA58E5E0222A284A00549C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA58E5DF222A284A00549C24 /* Assets.xcassets */; };
+		DA58E5E3222A284A00549C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E5E1222A284A00549C24 /* LaunchScreen.storyboard */; };
+		DA58E5EE222A284A00549C24 /* D_D_5e_NPC_OrganizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5ED222A284A00549C24 /* D_D_5e_NPC_OrganizerTests.swift */; };
+		DA58E5F9222A284A00549C24 /* D_D_5e_NPC_OrganizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5F8222A284A00549C24 /* D_D_5e_NPC_OrganizerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA58E5EA222A284A00549C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA58E5CD222A284500549C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA58E5D4222A284500549C24;
+			remoteInfo = "D&D 5e NPC Organizer";
+		};
+		DA58E5F5222A284A00549C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA58E5CD222A284500549C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA58E5D4222A284500549C24;
+			remoteInfo = "D&D 5e NPC Organizer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA58E5D5222A284500549C24 /* D&D 5e NPC Organizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&D 5e NPC Organizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA58E5D8222A284500549C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA58E5DA222A284500549C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA58E5DD222A284500549C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA58E5DF222A284A00549C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA58E5E2222A284A00549C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA58E5E4222A284A00549C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA58E5E9222A284A00549C24 /* D&D 5e NPC OrganizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "D&D 5e NPC OrganizerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA58E5ED222A284A00549C24 /* D_D_5e_NPC_OrganizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_D_5e_NPC_OrganizerTests.swift; sourceTree = "<group>"; };
+		DA58E5EF222A284A00549C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA58E5F4222A284A00549C24 /* D&D 5e NPC OrganizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "D&D 5e NPC OrganizerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA58E5F8222A284A00549C24 /* D_D_5e_NPC_OrganizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_D_5e_NPC_OrganizerUITests.swift; sourceTree = "<group>"; };
+		DA58E5FA222A284A00549C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA58E5D2222A284500549C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA58E5E6222A284A00549C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA58E5F1222A284A00549C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA58E5CC222A284500549C24 = {
+			isa = PBXGroup;
+			children = (
+				DA58E5D7222A284500549C24 /* D&D 5e NPC Organizer */,
+				DA58E5EC222A284A00549C24 /* D&D 5e NPC OrganizerTests */,
+				DA58E5F7222A284A00549C24 /* D&D 5e NPC OrganizerUITests */,
+				DA58E5D6222A284500549C24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA58E5D6222A284500549C24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E5D5222A284500549C24 /* D&D 5e NPC Organizer.app */,
+				DA58E5E9222A284A00549C24 /* D&D 5e NPC OrganizerTests.xctest */,
+				DA58E5F4222A284A00549C24 /* D&D 5e NPC OrganizerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA58E5D7222A284500549C24 /* D&D 5e NPC Organizer */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E5D8222A284500549C24 /* AppDelegate.swift */,
+				DA58E5DA222A284500549C24 /* ViewController.swift */,
+				DA58E5DC222A284500549C24 /* Main.storyboard */,
+				DA58E5DF222A284A00549C24 /* Assets.xcassets */,
+				DA58E5E1222A284A00549C24 /* LaunchScreen.storyboard */,
+				DA58E5E4222A284A00549C24 /* Info.plist */,
+			);
+			path = "D&D 5e NPC Organizer";
+			sourceTree = "<group>";
+		};
+		DA58E5EC222A284A00549C24 /* D&D 5e NPC OrganizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E5ED222A284A00549C24 /* D_D_5e_NPC_OrganizerTests.swift */,
+				DA58E5EF222A284A00549C24 /* Info.plist */,
+			);
+			path = "D&D 5e NPC OrganizerTests";
+			sourceTree = "<group>";
+		};
+		DA58E5F7222A284A00549C24 /* D&D 5e NPC OrganizerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E5F8222A284A00549C24 /* D_D_5e_NPC_OrganizerUITests.swift */,
+				DA58E5FA222A284A00549C24 /* Info.plist */,
+			);
+			path = "D&D 5e NPC OrganizerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA58E5D4222A284500549C24 /* D&D 5e NPC Organizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA58E5FD222A284A00549C24 /* Build configuration list for PBXNativeTarget "D&D 5e NPC Organizer" */;
+			buildPhases = (
+				DA58E5D1222A284500549C24 /* Sources */,
+				DA58E5D2222A284500549C24 /* Frameworks */,
+				DA58E5D3222A284500549C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "D&D 5e NPC Organizer";
+			productName = "D&D 5e NPC Organizer";
+			productReference = DA58E5D5222A284500549C24 /* D&D 5e NPC Organizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA58E5E8222A284A00549C24 /* D&D 5e NPC OrganizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA58E600222A284A00549C24 /* Build configuration list for PBXNativeTarget "D&D 5e NPC OrganizerTests" */;
+			buildPhases = (
+				DA58E5E5222A284A00549C24 /* Sources */,
+				DA58E5E6222A284A00549C24 /* Frameworks */,
+				DA58E5E7222A284A00549C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA58E5EB222A284A00549C24 /* PBXTargetDependency */,
+			);
+			name = "D&D 5e NPC OrganizerTests";
+			productName = "D&D 5e NPC OrganizerTests";
+			productReference = DA58E5E9222A284A00549C24 /* D&D 5e NPC OrganizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA58E5F3222A284A00549C24 /* D&D 5e NPC OrganizerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA58E603222A284A00549C24 /* Build configuration list for PBXNativeTarget "D&D 5e NPC OrganizerUITests" */;
+			buildPhases = (
+				DA58E5F0222A284A00549C24 /* Sources */,
+				DA58E5F1222A284A00549C24 /* Frameworks */,
+				DA58E5F2222A284A00549C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA58E5F6222A284A00549C24 /* PBXTargetDependency */,
+			);
+			name = "D&D 5e NPC OrganizerUITests";
+			productName = "D&D 5e NPC OrganizerUITests";
+			productReference = DA58E5F4222A284A00549C24 /* D&D 5e NPC OrganizerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA58E5CD222A284500549C24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Brendon Waters";
+				TargetAttributes = {
+					DA58E5D4222A284500549C24 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DA58E5E8222A284A00549C24 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DA58E5D4222A284500549C24;
+					};
+					DA58E5F3222A284A00549C24 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DA58E5D4222A284500549C24;
+					};
+				};
+			};
+			buildConfigurationList = DA58E5D0222A284500549C24 /* Build configuration list for PBXProject "D&D 5e NPC Organizer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA58E5CC222A284500549C24;
+			productRefGroup = DA58E5D6222A284500549C24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA58E5D4222A284500549C24 /* D&D 5e NPC Organizer */,
+				DA58E5E8222A284A00549C24 /* D&D 5e NPC OrganizerTests */,
+				DA58E5F3222A284A00549C24 /* D&D 5e NPC OrganizerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA58E5D3222A284500549C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA58E5E3222A284A00549C24 /* LaunchScreen.storyboard in Resources */,
+				DA58E5E0222A284A00549C24 /* Assets.xcassets in Resources */,
+				DA58E5DE222A284500549C24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA58E5E7222A284A00549C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA58E5F2222A284A00549C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA58E5D1222A284500549C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA58E5DB222A284500549C24 /* ViewController.swift in Sources */,
+				DA58E5D9222A284500549C24 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA58E5E5222A284A00549C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA58E5EE222A284A00549C24 /* D_D_5e_NPC_OrganizerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA58E5F0222A284A00549C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA58E5F9222A284A00549C24 /* D_D_5e_NPC_OrganizerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA58E5EB222A284A00549C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA58E5D4222A284500549C24 /* D&D 5e NPC Organizer */;
+			targetProxy = DA58E5EA222A284A00549C24 /* PBXContainerItemProxy */;
+		};
+		DA58E5F6222A284A00549C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA58E5D4222A284500549C24 /* D&D 5e NPC Organizer */;
+			targetProxy = DA58E5F5222A284A00549C24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA58E5DC222A284500549C24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA58E5DD222A284500549C24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA58E5E1222A284A00549C24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA58E5E2222A284A00549C24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA58E5FB222A284A00549C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA58E5FC222A284A00549C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA58E5FE222A284A00549C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TRUJ8SMC4T;
+				INFOPLIST_FILE = "D&D 5e NPC Organizer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.bwaters.D-D-5e-NPC-Organizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA58E5FF222A284A00549C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TRUJ8SMC4T;
+				INFOPLIST_FILE = "D&D 5e NPC Organizer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.bwaters.D-D-5e-NPC-Organizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA58E601222A284A00549C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TRUJ8SMC4T;
+				INFOPLIST_FILE = "D&D 5e NPC OrganizerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.bwaters.D-D-5e-NPC-OrganizerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D&D 5e NPC Organizer.app/D&D 5e NPC Organizer";
+			};
+			name = Debug;
+		};
+		DA58E602222A284A00549C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TRUJ8SMC4T;
+				INFOPLIST_FILE = "D&D 5e NPC OrganizerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.bwaters.D-D-5e-NPC-OrganizerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D&D 5e NPC Organizer.app/D&D 5e NPC Organizer";
+			};
+			name = Release;
+		};
+		DA58E604222A284A00549C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TRUJ8SMC4T;
+				INFOPLIST_FILE = "D&D 5e NPC OrganizerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.bwaters.D-D-5e-NPC-OrganizerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "D&D 5e NPC Organizer";
+			};
+			name = Debug;
+		};
+		DA58E605222A284A00549C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TRUJ8SMC4T;
+				INFOPLIST_FILE = "D&D 5e NPC OrganizerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.bwaters.D-D-5e-NPC-OrganizerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "D&D 5e NPC Organizer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA58E5D0222A284500549C24 /* Build configuration list for PBXProject "D&D 5e NPC Organizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA58E5FB222A284A00549C24 /* Debug */,
+				DA58E5FC222A284A00549C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA58E5FD222A284A00549C24 /* Build configuration list for PBXNativeTarget "D&D 5e NPC Organizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA58E5FE222A284A00549C24 /* Debug */,
+				DA58E5FF222A284A00549C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA58E600222A284A00549C24 /* Build configuration list for PBXNativeTarget "D&D 5e NPC OrganizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA58E601222A284A00549C24 /* Debug */,
+				DA58E602222A284A00549C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA58E603222A284A00549C24 /* Build configuration list for PBXNativeTarget "D&D 5e NPC OrganizerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA58E604222A284A00549C24 /* Debug */,
+				DA58E605222A284A00549C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA58E5CD222A284500549C24 /* Project object */;
+}
