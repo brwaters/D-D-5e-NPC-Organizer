@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0B14BA2231D54900C24538 /* Character.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0B14B82231D54900C24538 /* Character.xcdatamodeld */; };
+		DA54593C224072DA0046DD95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54593B224072DA0046DD95 /* TableViewController.swift */; };
 		DA58E5D9222A284500549C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5D8222A284500549C24 /* AppDelegate.swift */; };
 		DA58E5DB222A284500549C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5DA222A284500549C24 /* ViewController.swift */; };
 		DA58E5DE222A284500549C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E5DC222A284500549C24 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0B14B92231D54900C24538 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DA54593B224072DA0046DD95 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DA58E5D5222A284500549C24 /* D&D 5e NPC Organizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&D 5e NPC Organizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA58E5D8222A284500549C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA58E5DA222A284500549C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		DA58E5CC222A284500549C24 = {
 			isa = PBXGroup;
 			children = (
+				DA0B14B82231D54900C24538 /* Character.xcdatamodeld */,
 				DA58E5D7222A284500549C24 /* D&D 5e NPC Organizer */,
 				DA58E5EC222A284A00549C24 /* D&D 5e NPC OrganizerTests */,
 				DA58E5F7222A284A00549C24 /* D&D 5e NPC OrganizerUITests */,
@@ -97,6 +102,7 @@
 		DA58E5D7222A284500549C24 /* D&D 5e NPC Organizer */ = {
 			isa = PBXGroup;
 			children = (
+				DA54593B224072DA0046DD95 /* TableViewController.swift */,
 				DA58E5D8222A284500549C24 /* AppDelegate.swift */,
 				DA58E5DA222A284500549C24 /* ViewController.swift */,
 				DA58E5DC222A284500549C24 /* Main.storyboard */,
@@ -258,6 +264,8 @@
 			files = (
 				DA58E5DB222A284500549C24 /* ViewController.swift in Sources */,
 				DA58E5D9222A284500549C24 /* AppDelegate.swift in Sources */,
+				DA0B14BA2231D54900C24538 /* Character.xcdatamodeld in Sources */,
+				DA54593C224072DA0046DD95 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +594,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA0B14B82231D54900C24538 /* Character.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA0B14B92231D54900C24538 /* Model.xcdatamodel */,
+			);
+			currentVersion = DA0B14B92231D54900C24538 /* Model.xcdatamodel */;
+			path = Character.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DA58E5CD222A284500549C24 /* Project object */;
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AbilityScore" representedClassName="AbilityScore" syncable="YES" codeGenerationType="class">
+        <attribute name="charisma" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="constitution" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dexterity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="intellect" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="strength" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wisdom" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="characterAbilityScoreRel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="abilityScoreRel" inverseEntity="Character" syncable="YES"/>
+    </entity>
+    <entity name="Character" representedClassName="Character" syncable="YES" codeGenerationType="class">
+        <attribute name="actions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alignment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="armorClass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="challengeRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="characterDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="characteristics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="damageImmunities" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="damageResistances" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lairActions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="languages" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="legendaryActions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="racialAbilities" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senses" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speedClimbing" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speedFlying" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speedGround" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speedSwimming" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalHitPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="abilityScoreRel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AbilityScore" inverseName="characterAbilityScoreRel" inverseEntity="AbilityScore" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AbilityScore" positionX="-54" positionY="54" width="128" height="150"/>
+        <element name="Character" positionX="-63" positionY="-18" width="128" height="360"/>
+    </elements>
+</model>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RyB-Ls-FYN">
-    <device id="ipad9_7" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vBp-hJ-HiG">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,35 +13,30 @@
         <!--D&D 5e NPC Organizer-->
         <scene sceneID="3gb-ir-Z0A">
             <objects>
-                <tableViewController id="JoM-W9-F0w" sceneMemberID="viewController">
+                <tableViewController id="JoM-W9-F0w" customClass="TableViewController" customModule="D_D_5e_NPC_Organizer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v2I-gy-8b5">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="142" id="ZYB-br-zRi">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="142"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" textLabel="e3O-w8-2Pd" rowHeight="174" style="IBUITableViewCellStyleDefault" id="ZYB-br-zRi">
+                                <rect key="frame" x="0.0" y="28" width="768" height="174"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZYB-br-zRi" id="7Z4-ap-AfG">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="141.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZYB-br-zRi" id="7Z4-ap-AfG" customClass="UITableViewCell">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="173.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knp-7L-8T6">
-                                            <rect key="frame" x="0.0" y="-10" width="150" height="150"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GXM-tM-DZo">
-                                            <rect key="frame" x="148" y="0.0" width="876" height="140"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="View your NPC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e3O-w8-2Pd">
+                                            <rect key="frame" x="20" y="0.0" width="728" height="173.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZDG-Vb-QME" kind="show" id="gu7-RF-6oQ"/>
+                                    <segue destination="ZDG-Vb-QME" kind="show" id="MD6-NR-mGN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,143 +46,630 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="D&amp;D 5e NPC Organizer" id="7SQ-rb-CMd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Puz-Jf-Zih">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zHh-dN-OKS">
                             <connections>
-                                <segue destination="Eae-bo-GQa" kind="presentation" id="Woo-B8-1xn"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="nBz-Ej-TaQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WeZ-rq-S0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86.71875" y="-559.375"/>
-        </scene>
-        <!--MainStoryBoardNavContoroller-->
-        <scene sceneID="kcE-hZ-zq3">
-            <objects>
-                <navigationController title="MainStoryBoardNavContoroller" id="RyB-Ls-FYN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRk-GS-aKW">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="JoM-W9-F0w" kind="relationship" relationship="rootViewController" id="0Mj-kb-s6C"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CT6-OE-D21" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-598" y="-559"/>
+            <point key="canvasLocation" x="782" y="-559"/>
         </scene>
         <!--NPCDetail-->
         <scene sceneID="g9E-BK-enM">
             <objects>
                 <viewController title="NPCDetail" id="ZDG-Vb-QME" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8aQ-gP-dPP">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="dMQ-Oq-8dk">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dMQ-Oq-8dk" firstAttribute="leading" secondItem="NPo-oj-B12" secondAttribute="leading" id="0pO-xW-Q1u"/>
+                            <constraint firstItem="dMQ-Oq-8dk" firstAttribute="trailing" secondItem="NPo-oj-B12" secondAttribute="trailing" id="gOH-iV-SlL"/>
+                            <constraint firstItem="dMQ-Oq-8dk" firstAttribute="bottom" secondItem="NPo-oj-B12" secondAttribute="bottom" id="i4Y-8x-NMK"/>
+                            <constraint firstItem="dMQ-Oq-8dk" firstAttribute="top" secondItem="8aQ-gP-dPP" secondAttribute="top" id="uR4-Te-CT3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NPo-oj-B12"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2I6-uW-QCp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="3Sp-fR-yWx">
+                            <connections>
+                                <segue destination="Eae-bo-GQa" kind="show" id="YNA-90-Vnw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUo-e5-ha1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809.765625" y="-559.375"/>
+            <point key="canvasLocation" x="1480.46875" y="-559.5703125"/>
         </scene>
         <!--NPCEditor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="NPCEditor" id="BYZ-38-t0r" customClass="ViewController" customModule="D_D_5e_NPC_Organizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Character Silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="uBt-Ud-KbJ">
-                                <rect key="frame" x="20" y="82" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="S62-34-lIb">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="3000"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jZq-zZ-kaS">
-                                <rect key="frame" x="318" y="86" width="686" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.50980392156862742" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qIv-ig-b3E">
-                                <rect key="frame" x="318" y="136" width="686" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.50980392156862742" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lyc-zc-dDL">
-                                <rect key="frame" x="318" y="186" width="686" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.50980392156862742" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aMj-8m-PBE">
-                                <rect key="frame" x="133" y="242" width="862" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.50980392156862742" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VW-30-mWQ">
-                                <rect key="frame" x="189" y="97" width="55" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Characteristics:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT7-Jv-bOE">
-                                <rect key="frame" x="189" y="147" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alignment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7c-eR-PZl">
-                                <rect key="frame" x="189" y="197" width="82" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Armor Class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJo-J3-Rby">
-                                <rect key="frame" x="20" y="253" width="99" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hit Points:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8H-ua-hKb">
-                                <rect key="frame" x="20" y="308" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtB-dH-mqU">
+                                <rect key="frame" x="0.0" y="70" width="1024" height="2930"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-Z6-3Np">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="3000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Character Silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="uBt-Ud-KbJ">
+                                                <rect key="frame" x="20" y="20" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="Vzn-TB-Tow"/>
+                                                    <constraint firstAttribute="width" constant="150" id="rpP-8E-Xhf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Horizontal Rule" translatesAutoresizingMaskIntoConstraints="NO" id="PGv-4G-q5X">
+                                                <rect key="frame" x="8" y="178" width="1008" height="20"/>
+                                                <color key="tintColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1008" id="3WW-Mf-VFs"/>
+                                                    <constraint firstAttribute="height" constant="20" id="SRf-PC-5r3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Horizontal Rule" translatesAutoresizingMaskIntoConstraints="NO" id="l7t-id-d9K">
+                                                <rect key="frame" x="8" y="721.5" width="1008" height="20"/>
+                                                <color key="tintColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1008" id="hah-ZL-0K5"/>
+                                                    <constraint firstAttribute="height" constant="20" id="nTX-fQ-PYB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Sir Jacob of Hillside" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyc-zc-dDL">
+                                                <rect key="frame" x="260" y="4" width="738" height="57"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="T48-uf-k04"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="28"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VW-30-mWQ">
+                                                <rect key="frame" x="178" y="20" width="74" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="bTp-GA-NkI"/>
+                                                    <constraint firstAttribute="width" constant="74" id="pS0-hJ-Nmz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="23"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Hit Points:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJo-J3-Rby">
+                                                <rect key="frame" x="8" y="254" width="97" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Armor Class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8H-ua-hKb">
+                                                <rect key="frame" x="8" y="205" width="121" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Ability Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEq-xe-Wr1">
+                                                <rect key="frame" x="34" y="749.5" width="933" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alignment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7c-eR-PZl">
+                                                <rect key="frame" x="178" y="137" width="104" height="33"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="104" id="Tbo-XG-MIZ"/>
+                                                    <constraint firstAttribute="height" constant="33" id="jkS-fI-dDq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristics:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT7-Jv-bOE">
+                                                <rect key="frame" x="178" y="78" width="159" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="159" id="f2a-NM-AAy"/>
+                                                    <constraint firstAttribute="height" constant="34" id="fqC-sv-goQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="23"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-ii-aOq">
+                                                <rect key="frame" x="8" y="363" width="167" height="31"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxl-oH-Ct4">
+                                                <rect key="frame" x="8" y="411" width="110" height="50"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damage Immunities:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJa-sE-zDE">
+                                                <rect key="frame" x="8" y="602" width="193" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="193" id="BNO-kN-oWH"/>
+                                                    <constraint firstAttribute="height" constant="34" id="Dfh-82-zpT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUM-s7-n5j">
+                                                <rect key="frame" x="8" y="639" width="193" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Ksc-bJ-xOm"/>
+                                                    <constraint firstAttribute="width" constant="193" id="s6v-je-mDn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damage Resistances:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ged-bT-K47">
+                                                <rect key="frame" x="8" y="563" width="206" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="9xL-0c-IUk"/>
+                                                    <constraint firstAttribute="width" constant="206" id="VW9-RM-luu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saving Throws:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRD-yp-jKK">
+                                                <rect key="frame" x="8" y="474" width="145" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="QCX-hG-uXu"/>
+                                                    <constraint firstAttribute="width" constant="145" id="ZrA-AS-XJr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdI-7e-FSh">
+                                                <rect key="frame" x="8" y="524" width="55" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="Bwl-DQ-jbg"/>
+                                                    <constraint firstAttribute="height" constant="31" id="EVx-Qi-jrq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRh-DS-5dm">
+                                                <rect key="frame" x="8" y="307" width="67" height="29"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecL-j3-Qz7">
+                                                <rect key="frame" x="249" y="297" width="750" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOj-go-BQ7">
+                                                <rect key="frame" x="249" y="196" width="750" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryn-Kj-sbm">
+                                                <rect key="frame" x="249" y="240" width="750" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="nyz-wj-itm"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gte-9A-vgD">
+                                                <rect key="frame" x="249" y="414" width="750" height="42"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="mbQ-DL-HXW"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5s-Ep-eyd">
+                                                <rect key="frame" x="249" y="524" width="750" height="42"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="h0C-q1-8L3"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TED-bo-VE0">
+                                                <rect key="frame" x="249" y="474" width="750" height="42"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX7-gW-LLt">
+                                                <rect key="frame" x="249" y="595" width="750" height="48.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80o-gV-1Uh">
+                                                <rect key="frame" x="8" y="644" width="139" height="92"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="139" id="9Pn-Qe-5sm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKh-Ja-V4n">
+                                                <rect key="frame" x="248" y="553.5" width="750" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Medium humanoid (human, shapechanger)" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMj-8m-PBE">
+                                                <rect key="frame" x="359" y="70" width="639" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="GkC-RJ-MLu"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="23"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyC-Wd-xyP">
+                                                <rect key="frame" x="249" y="356" width="750" height="47"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwf-UD-BvU">
+                                                <rect key="frame" x="248" y="665.5" width="750" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIn-uc-HXX">
+                                                <rect key="frame" x="249" y="631.5" width="750" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="STR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfZ-v2-nI6">
+                                                <rect key="frame" x="31" y="815.5" width="45" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="Jab-bc-zMW"/>
+                                                    <constraint firstAttribute="height" constant="31" id="TR0-kO-Mph"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="DEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-RH-FFy">
+                                                <rect key="frame" x="217" y="815.5" width="45" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="TaG-9W-AY1"/>
+                                                    <constraint firstAttribute="height" constant="31" id="oMY-D2-BsO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="INT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOW-Wh-Ixx">
+                                                <rect key="frame" x="567" y="815.5" width="34" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="WIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="run-2k-uvE">
+                                                <rect key="frame" x="725" y="815.5" width="45" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="hFQ-Xj-jyJ"/>
+                                                    <constraint firstAttribute="width" constant="45" id="nUu-YS-goI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="CHA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFN-x8-JCA">
+                                                <rect key="frame" x="900" y="815.5" width="45" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="ssd-cE-Pan"/>
+                                                    <constraint firstAttribute="height" constant="31" id="tOl-ts-20g"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj6-jP-R2m">
+                                                <rect key="frame" x="18" y="854.5" width="77" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="77" id="HXX-9e-tPW"/>
+                                                    <constraint firstAttribute="height" constant="49" id="ZQS-cR-Noa"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMH-Yd-SOI">
+                                                <rect key="frame" x="201" y="854.5" width="77" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-2C-TRC">
+                                                <rect key="frame" x="380" y="854.5" width="77" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58r-YT-kpr">
+                                                <rect key="frame" x="540" y="855.5" width="77" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="77" id="9iI-I8-RVj"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdh-rn-SEw">
+                                                <rect key="frame" x="709" y="854.5" width="77" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEX-Co-NMx">
+                                                <rect key="frame" x="884" y="854.5" width="77" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Horizontal Rule" translatesAutoresizingMaskIntoConstraints="NO" id="EFY-tX-eKH">
+                                                <rect key="frame" x="8" y="926.5" width="1008" height="20"/>
+                                                <color key="tintColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1008" id="Wfo-Uf-oDT"/>
+                                                    <constraint firstAttribute="height" constant="20" id="gOf-X9-tgf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Chaotic Evil" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSh-tG-E7q">
+                                                <rect key="frame" x="336" y="129" width="625" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="CON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPO-pi-JmG">
+                                                <rect key="frame" x="388" y="815.5" width="61" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="61" id="gj3-qC-MiP"/>
+                                                    <constraint firstAttribute="height" constant="31" id="v9z-zE-waP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="21"/>
+                                                <color key="textColor" red="0.50980392159999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="tfZ-v2-nI6" firstAttribute="baseline" secondItem="nOW-Wh-Ixx" secondAttribute="baseline" id="02B-Qk-9t5"/>
+                                            <constraint firstItem="IJo-J3-Rby" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="03d-h3-4Da"/>
+                                            <constraint firstItem="K8H-ua-hKb" firstAttribute="top" secondItem="PGv-4G-q5X" secondAttribute="bottom" constant="7" id="0xD-RT-cfl"/>
+                                            <constraint firstItem="wT7-Jv-bOE" firstAttribute="leading" secondItem="1VW-30-mWQ" secondAttribute="leading" id="2Kc-TG-5ch"/>
+                                            <constraint firstItem="RRh-DS-5dm" firstAttribute="leading" secondItem="K8H-ua-hKb" secondAttribute="leading" id="2pd-gD-C78"/>
+                                            <constraint firstItem="l8B-RH-FFy" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="217" id="2pj-lq-bM4"/>
+                                            <constraint firstItem="58r-YT-kpr" firstAttribute="width" secondItem="kMH-Yd-SOI" secondAttribute="width" id="3D7-Zq-Sgw"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="trailing" secondItem="qyC-Wd-xyP" secondAttribute="trailing" id="47Y-p8-183"/>
+                                            <constraint firstItem="bX7-gW-LLt" firstAttribute="leading" secondItem="ged-bT-K47" secondAttribute="trailing" constant="35" id="517-xb-c7y"/>
+                                            <constraint firstItem="pOj-go-BQ7" firstAttribute="centerY" secondItem="K8H-ua-hKb" secondAttribute="centerY" id="531-a7-J1g"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="trailing" secondItem="ryn-Kj-sbm" secondAttribute="trailing" id="5SL-8f-Drl"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="top" secondItem="gte-9A-vgD" secondAttribute="bottom" constant="18" id="5Zc-pT-Gjg"/>
+                                            <constraint firstItem="PRD-yp-jKK" firstAttribute="top" secondItem="gxl-oH-Ct4" secondAttribute="bottom" constant="13" id="648-FC-l2e"/>
+                                            <constraint firstItem="58r-YT-kpr" firstAttribute="height" secondItem="kMH-Yd-SOI" secondAttribute="height" id="6XE-MQ-njx"/>
+                                            <constraint firstItem="i7c-eR-PZl" firstAttribute="top" secondItem="wT7-Jv-bOE" secondAttribute="bottom" constant="25" id="77X-I1-BdM"/>
+                                            <constraint firstAttribute="trailing" secondItem="PGv-4G-q5X" secondAttribute="trailing" constant="8" id="7Mp-7r-JDt"/>
+                                            <constraint firstItem="PRD-yp-jKK" firstAttribute="leading" secondItem="gxl-oH-Ct4" secondAttribute="leading" id="81y-T2-RfR"/>
+                                            <constraint firstItem="RRh-DS-5dm" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="9Nc-5a-IjS"/>
+                                            <constraint firstItem="aJa-sE-zDE" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="9lx-bq-zA8"/>
+                                            <constraint firstItem="tfZ-v2-nI6" firstAttribute="baseline" secondItem="run-2k-uvE" secondAttribute="baseline" id="9pA-YF-8OE"/>
+                                            <constraint firstItem="jK4-ii-aOq" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="AMl-WS-Ti6"/>
+                                            <constraint firstItem="Rdh-rn-SEw" firstAttribute="leading" secondItem="58r-YT-kpr" secondAttribute="trailing" constant="92" id="Bnj-Zb-XE4"/>
+                                            <constraint firstItem="Yj6-jP-R2m" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="18" id="Bpy-Xo-3OP"/>
+                                            <constraint firstItem="aJa-sE-zDE" firstAttribute="bottom" secondItem="QKh-Ja-V4n" secondAttribute="bottom" constant="33.5" id="C5l-TW-JOx"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="leading" secondItem="nIn-uc-HXX" secondAttribute="leading" id="CN4-ZT-Dji"/>
+                                            <constraint firstItem="g5s-Ep-eyd" firstAttribute="top" secondItem="TED-bo-VE0" secondAttribute="bottom" constant="8" symbolic="YES" id="CYl-t8-pkE"/>
+                                            <constraint firstItem="ged-bT-K47" firstAttribute="top" secondItem="pdI-7e-FSh" secondAttribute="bottom" constant="8" id="Dms-k8-Jdv"/>
+                                            <constraint firstItem="wEq-xe-Wr1" firstAttribute="top" secondItem="l7t-id-d9K" secondAttribute="bottom" constant="8" id="E3g-Az-Djj"/>
+                                            <constraint firstAttribute="trailing" secondItem="wEq-xe-Wr1" secondAttribute="trailing" constant="57" id="E7k-QD-iHs"/>
+                                            <constraint firstItem="58r-YT-kpr" firstAttribute="leading" secondItem="Vna-2C-TRC" secondAttribute="trailing" constant="83" id="Edg-jy-h0h"/>
+                                            <constraint firstItem="wT7-Jv-bOE" firstAttribute="leading" secondItem="uBt-Ud-KbJ" secondAttribute="trailing" constant="8" id="F1n-S9-dRq"/>
+                                            <constraint firstItem="EFY-tX-eKH" firstAttribute="top" secondItem="58r-YT-kpr" secondAttribute="bottom" constant="22" id="FcX-7G-cjI"/>
+                                            <constraint firstItem="Jwf-UD-BvU" firstAttribute="top" secondItem="bX7-gW-LLt" secondAttribute="bottom" constant="22" id="FfJ-c7-mjx"/>
+                                            <constraint firstItem="K8H-ua-hKb" firstAttribute="top" secondItem="Hgc-Z6-3Np" secondAttribute="top" constant="205" id="Fr0-Tg-n3Q"/>
+                                            <constraint firstItem="80o-gV-1Uh" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="GAp-g2-aad"/>
+                                            <constraint firstItem="wEq-xe-Wr1" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="34" id="Gns-Iy-C56"/>
+                                            <constraint firstItem="pdI-7e-FSh" firstAttribute="leading" secondItem="gxl-oH-Ct4" secondAttribute="leading" id="H9A-VF-Ce8"/>
+                                            <constraint firstItem="run-2k-uvE" firstAttribute="centerX" secondItem="Rdh-rn-SEw" secondAttribute="centerX" id="I7d-s2-2cQ"/>
+                                            <constraint firstItem="Yj6-jP-R2m" firstAttribute="top" secondItem="tfZ-v2-nI6" secondAttribute="bottom" constant="8" symbolic="YES" id="IKT-7o-SXi"/>
+                                            <constraint firstItem="Vna-2C-TRC" firstAttribute="top" secondItem="wPO-pi-JmG" secondAttribute="bottom" constant="8" symbolic="YES" id="KNS-Ac-4aV"/>
+                                            <constraint firstAttribute="trailing" secondItem="run-2k-uvE" secondAttribute="trailing" constant="254" id="Kkk-Nq-Isc"/>
+                                            <constraint firstItem="ecL-j3-Qz7" firstAttribute="top" secondItem="ryn-Kj-sbm" secondAttribute="bottom" constant="8" symbolic="YES" id="LOx-ts-kGe"/>
+                                            <constraint firstAttribute="trailing" secondItem="hFN-x8-JCA" secondAttribute="trailing" constant="79" id="LWV-a0-gpf"/>
+                                            <constraint firstItem="jK4-ii-aOq" firstAttribute="leading" secondItem="K8H-ua-hKb" secondAttribute="leading" id="Lnl-b5-Apy"/>
+                                            <constraint firstItem="IJo-J3-Rby" firstAttribute="top" secondItem="K8H-ua-hKb" secondAttribute="bottom" constant="18" id="M9i-iR-91Z"/>
+                                            <constraint firstItem="PGv-4G-q5X" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="MTj-7e-vWf"/>
+                                            <constraint firstItem="RRh-DS-5dm" firstAttribute="centerY" secondItem="ecL-j3-Qz7" secondAttribute="centerY" id="N9f-jY-ebW"/>
+                                            <constraint firstItem="i7c-eR-PZl" firstAttribute="leading" secondItem="uBt-Ud-KbJ" secondAttribute="trailing" constant="8" id="NUG-Jm-nxF"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="leading" secondItem="ryn-Kj-sbm" secondAttribute="leading" id="NlT-WK-OgJ"/>
+                                            <constraint firstItem="bX7-gW-LLt" firstAttribute="top" secondItem="g5s-Ep-eyd" secondAttribute="bottom" constant="29" id="OI7-W1-gk3"/>
+                                            <constraint firstItem="Yj6-jP-R2m" firstAttribute="centerX" secondItem="IJo-J3-Rby" secondAttribute="centerX" id="OUh-T2-bt9"/>
+                                            <constraint firstItem="gte-9A-vgD" firstAttribute="top" secondItem="Hgc-Z6-3Np" secondAttribute="top" constant="414" id="OcQ-Rz-W1P"/>
+                                            <constraint firstItem="uBt-Ud-KbJ" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="20" id="OhE-1b-hEG"/>
+                                            <constraint firstItem="qUM-s7-n5j" firstAttribute="leading" secondItem="aJa-sE-zDE" secondAttribute="leading" id="PXb-DN-fB5"/>
+                                            <constraint firstItem="GSh-tG-E7q" firstAttribute="leading" secondItem="i7c-eR-PZl" secondAttribute="trailing" constant="54" id="PgR-O3-ohb"/>
+                                            <constraint firstItem="RRh-DS-5dm" firstAttribute="top" secondItem="IJo-J3-Rby" secondAttribute="bottom" constant="22" id="Pvg-rX-lYY"/>
+                                            <constraint firstAttribute="trailing" secondItem="nOW-Wh-Ixx" secondAttribute="trailing" constant="423" id="Pzh-Bh-lx7"/>
+                                            <constraint firstItem="aJa-sE-zDE" firstAttribute="top" secondItem="ged-bT-K47" secondAttribute="bottom" constant="8" id="Qdr-PO-IMb"/>
+                                            <constraint firstItem="Rdh-rn-SEw" firstAttribute="width" secondItem="kMH-Yd-SOI" secondAttribute="width" id="QrO-bC-UtJ"/>
+                                            <constraint firstItem="kMH-Yd-SOI" firstAttribute="top" secondItem="l8B-RH-FFy" secondAttribute="bottom" constant="8" symbolic="YES" id="SSM-qo-Wl7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jwf-UD-BvU" secondAttribute="trailing" constant="26" id="SkI-uQ-N05"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="trailing" secondItem="bX7-gW-LLt" secondAttribute="trailing" id="SrA-Ni-tUA"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="trailing" secondItem="pOj-go-BQ7" secondAttribute="trailing" id="Sxc-OD-eaL"/>
+                                            <constraint firstItem="gte-9A-vgD" firstAttribute="top" secondItem="qyC-Wd-xyP" secondAttribute="bottom" constant="11" id="TMY-UA-kK9"/>
+                                            <constraint firstItem="wT7-Jv-bOE" firstAttribute="top" secondItem="1VW-30-mWQ" secondAttribute="bottom" constant="24" id="Tdm-zz-tmy"/>
+                                            <constraint firstItem="hFN-x8-JCA" firstAttribute="centerX" secondItem="qEX-Co-NMx" secondAttribute="centerX" id="TkS-YV-6iW"/>
+                                            <constraint firstItem="l8B-RH-FFy" firstAttribute="centerX" secondItem="kMH-Yd-SOI" secondAttribute="centerX" id="Tq8-lA-RV2"/>
+                                            <constraint firstItem="wPO-pi-JmG" firstAttribute="centerX" secondItem="Vna-2C-TRC" secondAttribute="centerX" id="W1S-Mz-EV8"/>
+                                            <constraint firstItem="l7t-id-d9K" firstAttribute="top" secondItem="Jwf-UD-BvU" secondAttribute="bottom" constant="7" id="WVl-LB-rel"/>
+                                            <constraint firstItem="K8H-ua-hKb" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="Xw6-D2-kG8"/>
+                                            <constraint firstItem="l7t-id-d9K" firstAttribute="leading" secondItem="80o-gV-1Uh" secondAttribute="leading" id="Ybj-g5-UXX"/>
+                                            <constraint firstItem="tfZ-v2-nI6" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="31" id="Z8Y-2Y-YKf"/>
+                                            <constraint firstItem="pdI-7e-FSh" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="ZkC-E6-DmN"/>
+                                            <constraint firstAttribute="trailing" secondItem="58r-YT-kpr" secondAttribute="trailing" constant="407" id="aTW-ub-Cek"/>
+                                            <constraint firstItem="Jwf-UD-BvU" firstAttribute="trailing" secondItem="aMj-8m-PBE" secondAttribute="trailing" id="b43-kX-Nce"/>
+                                            <constraint firstItem="lyc-zc-dDL" firstAttribute="leading" secondItem="1VW-30-mWQ" secondAttribute="trailing" constant="8" id="boT-cF-KXi"/>
+                                            <constraint firstItem="ged-bT-K47" firstAttribute="leading" secondItem="gxl-oH-Ct4" secondAttribute="leading" id="bv5-mI-2Am"/>
+                                            <constraint firstItem="Jwf-UD-BvU" firstAttribute="leading" secondItem="QKh-Ja-V4n" secondAttribute="leading" id="byN-aI-5qV"/>
+                                            <constraint firstItem="g5s-Ep-eyd" firstAttribute="leading" secondItem="ecL-j3-Qz7" secondAttribute="leading" id="cCE-zG-P4v"/>
+                                            <constraint firstItem="tfZ-v2-nI6" firstAttribute="baseline" secondItem="wPO-pi-JmG" secondAttribute="baseline" id="cOn-6J-Sag"/>
+                                            <constraint firstItem="jK4-ii-aOq" firstAttribute="centerY" secondItem="qyC-Wd-xyP" secondAttribute="centerY" constant="-1" id="ce1-Jz-JpF"/>
+                                            <constraint firstItem="qEX-Co-NMx" firstAttribute="width" secondItem="kMH-Yd-SOI" secondAttribute="width" id="cv4-I9-OKS"/>
+                                            <constraint firstItem="gxl-oH-Ct4" firstAttribute="leading" secondItem="K8H-ua-hKb" secondAttribute="leading" id="dT0-gh-aR2"/>
+                                            <constraint firstItem="tfZ-v2-nI6" firstAttribute="baseline" secondItem="l8B-RH-FFy" secondAttribute="baseline" id="e4L-3D-Ws3"/>
+                                            <constraint firstItem="ryn-Kj-sbm" firstAttribute="top" secondItem="PGv-4G-q5X" secondAttribute="bottom" constant="42" id="eHc-qL-iUb"/>
+                                            <constraint firstItem="g5s-Ep-eyd" firstAttribute="leading" secondItem="TED-bo-VE0" secondAttribute="leading" id="f3z-cv-cE8"/>
+                                            <constraint firstItem="aMj-8m-PBE" firstAttribute="leading" secondItem="wT7-Jv-bOE" secondAttribute="trailing" constant="22" id="fEX-MV-fSI"/>
+                                            <constraint firstItem="uBt-Ud-KbJ" firstAttribute="top" secondItem="Hgc-Z6-3Np" secondAttribute="top" constant="20" id="fag-WM-Xqb"/>
+                                            <constraint firstItem="l7t-id-d9K" firstAttribute="top" secondItem="nIn-uc-HXX" secondAttribute="bottom" constant="41" id="fpZ-JD-VbR"/>
+                                            <constraint firstItem="gte-9A-vgD" firstAttribute="leading" secondItem="qyC-Wd-xyP" secondAttribute="leading" id="fta-Zr-5Ku"/>
+                                            <constraint firstItem="qEX-Co-NMx" firstAttribute="height" secondItem="kMH-Yd-SOI" secondAttribute="height" id="gAf-Od-4ub"/>
+                                            <constraint firstItem="80o-gV-1Uh" firstAttribute="leading" secondItem="gxl-oH-Ct4" secondAttribute="leading" id="gBF-Ly-q6V"/>
+                                            <constraint firstItem="1VW-30-mWQ" firstAttribute="leading" secondItem="uBt-Ud-KbJ" secondAttribute="trailing" constant="8" id="gVk-eH-y0w"/>
+                                            <constraint firstItem="1VW-30-mWQ" firstAttribute="top" secondItem="Hgc-Z6-3Np" secondAttribute="top" constant="20" id="hN3-4T-en2"/>
+                                            <constraint firstItem="Rdh-rn-SEw" firstAttribute="top" secondItem="run-2k-uvE" secondAttribute="bottom" constant="8" symbolic="YES" id="hnP-SX-NY8"/>
+                                            <constraint firstItem="aMj-8m-PBE" firstAttribute="top" secondItem="lyc-zc-dDL" secondAttribute="bottom" constant="9" id="i2S-Sg-ZKL"/>
+                                            <constraint firstItem="i7c-eR-PZl" firstAttribute="leading" secondItem="1VW-30-mWQ" secondAttribute="leading" id="its-nI-K6F"/>
+                                            <constraint firstAttribute="trailing" secondItem="TED-bo-VE0" secondAttribute="trailing" constant="25" id="jKf-yT-60y"/>
+                                            <constraint firstItem="Rdh-rn-SEw" firstAttribute="height" secondItem="kMH-Yd-SOI" secondAttribute="height" id="jnC-Ev-6Su"/>
+                                            <constraint firstItem="qUM-s7-n5j" firstAttribute="top" secondItem="aJa-sE-zDE" secondAttribute="bottom" constant="3" id="kev-wg-OUM"/>
+                                            <constraint firstItem="Jwf-UD-BvU" firstAttribute="trailing" secondItem="lyc-zc-dDL" secondAttribute="trailing" id="lFo-WD-fAA"/>
+                                            <constraint firstItem="gxl-oH-Ct4" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="m3B-wV-2sg"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="leading" secondItem="qyC-Wd-xyP" secondAttribute="leading" id="m4p-H7-o3f"/>
+                                            <constraint firstItem="lyc-zc-dDL" firstAttribute="top" secondItem="Hgc-Z6-3Np" secondAttribute="top" constant="4" id="mX3-3n-mQD"/>
+                                            <constraint firstItem="tfZ-v2-nI6" firstAttribute="baseline" secondItem="hFN-x8-JCA" secondAttribute="baseline" id="np2-y5-7QI"/>
+                                            <constraint firstItem="GSh-tG-E7q" firstAttribute="trailing" secondItem="qEX-Co-NMx" secondAttribute="trailing" id="oBt-Fu-Trr"/>
+                                            <constraint firstItem="Jwf-UD-BvU" firstAttribute="centerY" secondItem="80o-gV-1Uh" secondAttribute="centerY" id="oGD-9H-Rie"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="leading" secondItem="pOj-go-BQ7" secondAttribute="leading" id="pS6-K1-Y5t"/>
+                                            <constraint firstItem="g5s-Ep-eyd" firstAttribute="leading" secondItem="bX7-gW-LLt" secondAttribute="leading" id="q7I-Cp-QzV"/>
+                                            <constraint firstItem="nIn-uc-HXX" firstAttribute="top" secondItem="QKh-Ja-V4n" secondAttribute="bottom" constant="29" id="qfv-jd-3rR"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="trailing" secondItem="nIn-uc-HXX" secondAttribute="trailing" id="qm2-xx-t5x"/>
+                                            <constraint firstItem="nIn-uc-HXX" firstAttribute="centerY" secondItem="qUM-s7-n5j" secondAttribute="centerY" id="rGq-rP-C8k"/>
+                                            <constraint firstItem="pOj-go-BQ7" firstAttribute="top" secondItem="GSh-tG-E7q" secondAttribute="bottom" constant="18" id="sH6-wO-70P"/>
+                                            <constraint firstItem="ged-bT-K47" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="szT-Tq-67n"/>
+                                            <constraint firstItem="qyC-Wd-xyP" firstAttribute="leading" secondItem="jK4-ii-aOq" secondAttribute="trailing" constant="74" id="t39-aF-B79"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="trailing" secondItem="ecL-j3-Qz7" secondAttribute="trailing" id="tLI-Ss-vGe"/>
+                                            <constraint firstItem="gxl-oH-Ct4" firstAttribute="top" secondItem="jK4-ii-aOq" secondAttribute="bottom" constant="17" id="tPf-uV-Q3g"/>
+                                            <constraint firstItem="Jwf-UD-BvU" firstAttribute="trailing" secondItem="QKh-Ja-V4n" secondAttribute="trailing" id="uPJ-WH-o5a"/>
+                                            <constraint firstItem="58r-YT-kpr" firstAttribute="top" secondItem="nOW-Wh-Ixx" secondAttribute="bottom" constant="9" id="ubv-lv-hZl"/>
+                                            <constraint firstItem="Vna-2C-TRC" firstAttribute="height" secondItem="kMH-Yd-SOI" secondAttribute="height" id="ufV-5k-tWb"/>
+                                            <constraint firstItem="EFY-tX-eKH" firstAttribute="leading" secondItem="l7t-id-d9K" secondAttribute="leading" id="ulm-t3-N01"/>
+                                            <constraint firstItem="qEX-Co-NMx" firstAttribute="top" secondItem="hFN-x8-JCA" secondAttribute="bottom" constant="8" symbolic="YES" id="uwM-xM-gud"/>
+                                            <constraint firstItem="IJo-J3-Rby" firstAttribute="leading" secondItem="K8H-ua-hKb" secondAttribute="leading" id="v2S-jP-nhW"/>
+                                            <constraint firstItem="g5s-Ep-eyd" firstAttribute="top" secondItem="pdI-7e-FSh" secondAttribute="top" id="v6T-ZP-rmB"/>
+                                            <constraint firstItem="jK4-ii-aOq" firstAttribute="top" secondItem="RRh-DS-5dm" secondAttribute="bottom" constant="27" id="v7g-eh-kb6"/>
+                                            <constraint firstItem="PRD-yp-jKK" firstAttribute="leading" secondItem="Hgc-Z6-3Np" secondAttribute="leading" constant="8" id="viG-iO-IEL"/>
+                                            <constraint firstItem="TED-bo-VE0" firstAttribute="top" secondItem="PRD-yp-jKK" secondAttribute="top" id="wGI-J8-peK"/>
+                                            <constraint firstItem="tfZ-v2-nI6" firstAttribute="top" secondItem="wEq-xe-Wr1" secondAttribute="bottom" constant="35" id="wfN-lF-G4s"/>
+                                            <constraint firstItem="80o-gV-1Uh" firstAttribute="top" secondItem="aJa-sE-zDE" secondAttribute="bottom" constant="8" id="x36-rc-V3x"/>
+                                            <constraint firstItem="QKh-Ja-V4n" firstAttribute="leading" secondItem="aJa-sE-zDE" secondAttribute="trailing" constant="47" id="xIp-LE-Z4S"/>
+                                            <constraint firstItem="aJa-sE-zDE" firstAttribute="leading" secondItem="gxl-oH-Ct4" secondAttribute="leading" id="xbt-7r-mZS"/>
+                                            <constraint firstItem="pdI-7e-FSh" firstAttribute="top" secondItem="PRD-yp-jKK" secondAttribute="bottom" constant="19" id="zeO-oZ-YlU"/>
+                                            <constraint firstItem="Vna-2C-TRC" firstAttribute="width" secondItem="kMH-Yd-SOI" secondAttribute="width" id="zoW-gE-RiL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hgc-Z6-3Np" firstAttribute="leading" secondItem="xtB-dH-mqU" secondAttribute="leading" id="Rn0-FD-7GA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hgc-Z6-3Np" secondAttribute="trailing" id="Z82-Gs-rhI"/>
+                                    <constraint firstItem="Hgc-Z6-3Np" firstAttribute="top" secondItem="xtB-dH-mqU" secondAttribute="top" id="m8y-Me-Azr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hgc-Z6-3Np" secondAttribute="bottom" constant="-70" id="vym-qV-VLx"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xtB-dH-mqU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9e7-P8-djd"/>
+                            <constraint firstItem="xtB-dH-mqU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="B96-Yw-8TG"/>
+                            <constraint firstItem="Hgc-Z6-3Np" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="DU2-dj-A4J"/>
+                            <constraint firstItem="xtB-dH-mqU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rho-IP-40K"/>
+                            <constraint firstItem="xtB-dH-mqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o8b-lZ-9Fx"/>
+                            <constraint firstItem="Hgc-Z6-3Np" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="wuH-hP-iYE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9HT-Ty-Nxa">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dxr-7c-pH0"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dxr-7c-pH0">
+                            <connections>
+                                <action selector="cancelButton:" destination="BYZ-38-t0r" id="d0r-SM-ASh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="aC9-qr-fAK"/>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="3000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799.8046875" y="167.96875"/>
+            <point key="canvasLocation" x="1478.90625" y="1244.53125"/>
         </scene>
         <!--NPCEditorNavController-->
         <scene sceneID="6OL-3g-GA3">
@@ -195,7 +677,7 @@
                 <navigationController title="NPCEditorNavController" automaticallyAdjustsScrollViewInsets="NO" id="Eae-bo-GQa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gPm-iw-EAL">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -205,10 +687,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFF-ZL-7M7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="168"/>
+            <point key="canvasLocation" x="87" y="191"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rqw-3O-Fvx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vBp-hJ-HiG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xSD-gD-EoC">
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JoM-W9-F0w" kind="relationship" relationship="rootViewController" id="T5c-IP-gvl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anV-as-6iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.71875" y="-559.375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="512" height="512"/>
         <image name="Character Silhouette" width="250" height="250"/>
+        <image name="Horizontal Rule" width="226" height="3"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zlq-ay-u8L"/>
+    </inferredMetricsTieBreakers>
 </document>
