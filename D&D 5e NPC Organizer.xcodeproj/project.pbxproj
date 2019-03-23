@@ -25,10 +25,6 @@
 		DA58E5DF222A284A00549C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA58E5E2222A284A00549C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA58E5E4222A284A00549C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA58E5ED222A284A00549C24 /* D_D_5e_NPC_OrganizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_D_5e_NPC_OrganizerTests.swift; sourceTree = "<group>"; };
-		DA58E5EF222A284A00549C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA58E5F8222A284A00549C24 /* D_D_5e_NPC_OrganizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_D_5e_NPC_OrganizerUITests.swift; sourceTree = "<group>"; };
-		DA58E5FA222A284A00549C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAE7357622458AF300727336 /* CharacterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,8 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				DA58E5D7222A284500549C24 /* D&D 5e NPC Organizer */,
-				DA58E5EC222A284A00549C24 /* D&D 5e NPC OrganizerTests */,
-				DA58E5F7222A284A00549C24 /* D&D 5e NPC OrganizerUITests */,
 				DA58E5D6222A284500549C24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,24 +68,6 @@
 				DAE7357622458AF300727336 /* CharacterItem.swift */,
 			);
 			path = "D&D 5e NPC Organizer";
-			sourceTree = "<group>";
-		};
-		DA58E5EC222A284A00549C24 /* D&D 5e NPC OrganizerTests */ = {
-			isa = PBXGroup;
-			children = (
-				DA58E5ED222A284A00549C24 /* D_D_5e_NPC_OrganizerTests.swift */,
-				DA58E5EF222A284A00549C24 /* Info.plist */,
-			);
-			path = "D&D 5e NPC OrganizerTests";
-			sourceTree = "<group>";
-		};
-		DA58E5F7222A284A00549C24 /* D&D 5e NPC OrganizerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DA58E5F8222A284A00549C24 /* D_D_5e_NPC_OrganizerUITests.swift */,
-				DA58E5FA222A284A00549C24 /* Info.plist */,
-			);
-			path = "D&D 5e NPC OrganizerUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
