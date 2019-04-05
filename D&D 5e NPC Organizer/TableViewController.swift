@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import os
 
 class TableViewController: UITableViewController {
 
+    var characterContainer = [CharacterItem]();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +24,11 @@ class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    func saveItems() {
+        if !NSKeyedArchiver.archiveRootObject(characterContainer, toFile: CharacterItem.archiveURL.path) {
+            os_log("Cannot save in %@", log: OSLog.default, type: .debug, CharacterItem.archiveURL.path) }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -29,17 +36,33 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return characterContainer.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
-
         // Configure the cell...
-
+        //cell.imageView =
+        //cell.contentView.te = "Testing"
+        //cell.detailTextLabel = "another test"
         return cell
     }
-
+    
+    @IBAction func unwindFromEditView(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ViewController, let customCharacter = sourceViewController.customCharacter {
+            // Edit
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                characterContainer[selectedIndexPath.row] = customCharacter
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                // Add
+                let newIndexPath = IndexPath(row: characterContainer.count, section: 0)
+                characterContainer.append(customCharacter)
+                tableView.insertRows(at: [newIndexPath], with: .automatic) // iOS picks animation
+            }
+            saveItems()
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

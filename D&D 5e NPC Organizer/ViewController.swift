@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import os
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var defaultCharacter = CharacterItem.init(image: #imageLiteral(resourceName: "undead"))
+        setupDefaultCharacter()
+        
+    }
+
+    var customCharacter: CharacterItem?
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    func setupDefaultCharacter() {
+        var defaultCharacter = CharacterItem.init(image: #imageLiteral(resourceName: "undead"), name: "Strahd Von Zarovich", description: "Medium Undead")
         
         nameText.text = defaultCharacter.name
         characteristicsText.text = defaultCharacter.characterDescription
@@ -28,7 +37,7 @@ class ViewController: UIViewController {
         damageResistanceText.text = defaultCharacter.damageResistance
         damageVulnerabilitiesText.text = defaultCharacter.damageVulnerability
         sensesText.text = defaultCharacter.senses
-        miscellaneousText.text = "Miscellaneous"
+        miscellaneousText.text = defaultCharacter.miscellaneous
         
         strengthText.text = defaultCharacter.abilityScore["STR"]
         dexterityText.text = defaultCharacter.abilityScore["DEX"]
@@ -37,22 +46,43 @@ class ViewController: UIViewController {
         wisdomText.text = defaultCharacter.abilityScore["WIS"]
         charismaText.text = defaultCharacter.abilityScore["CHA"]
         
-        abilitiesText.text = defaultCharacter.abilities["Shapechanger"]
+        abilitiesText.text = defaultCharacter.abilities
         
-        actionsText.text = defaultCharacter.actions["Multiattack (Vampire Form Only"]
+        actionsText.text = defaultCharacter.actions
         
-        legendaryActionsText.text = defaultCharacter.actions["legendaryDescription"]
+        legendaryActionsText.text = defaultCharacter.legendaryActions
         
-        lairActionsText.text = defaultCharacter.actions["lairDescription"]
-        
+        lairActionsText.text = defaultCharacter.lairActions
     }
-
+    
+    
+    @IBAction func imagePick(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        self.present(imagePickerController, animated:true, completion:nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            os_log("Missing image in %@", log: OSLog.default, type: .debug, info)
+            return
+        }
+        characterAvatar.image = selectedImage
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func cancelButton(_ sender: Any) {
         if presentingViewController is UINavigationController {
             // Add
             dismiss(animated: true, completion: nil)
         }
-        else if let owningNavigationController = navigationController { // Edit
+        else if let owningNavigationController = navigationController {
+            // Edit
             owningNavigationController.popViewController(animated: true)
         }
 
@@ -88,8 +118,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var legendaryActionsText: UITextView!
     @IBOutlet weak var lairActionsText: UITextView!
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let button = sender as? UIBarButtonItem, button === saveButton
+        else {
+            return
+        }
+        customCharacter = CharacterItem.init(image: characterAvatar.image ?? #imageLiteral(resourceName: "Character Silhouette") , name: nameText.text, description: characteristicsText.text)
+        
+        customCharacter?.alignment = alignmentText.text ?? ""
+        customCharacter?.armorClass = armorClassText.text ?? ""
+        customCharacter?.hitPoints = hitPointsText.text ?? ""
+        customCharacter?.speed = speedText.text ?? ""
+        customCharacter?.challengeRating = challengeRatingText.text ?? ""
+        customCharacter?.languages = languagesText.text ?? ""
+        customCharacter?.savingThrows = savingThrowsText.text ?? ""
+        customCharacter?.skills = skillsText.text ?? ""
+        customCharacter?.damageResistance = damageResistanceText.text ?? ""
+        customCharacter?.damageVulnerability = damageVulnerabilitiesText.text ?? ""
+        customCharacter?.senses = sensesText.text ?? ""
+        customCharacter?.miscellaneous = miscellaneousText.text ?? ""
+        
+        customCharacter?.abilityScore["STR"] = strengthText.text ?? ""
+        customCharacter?.abilityScore["DEX"] = strengthText.text ?? ""
+        customCharacter?.abilityScore["CON"] = strengthText.text ?? ""
+        customCharacter?.abilityScore["INT"] = strengthText.text ?? ""
+        customCharacter?.abilityScore["WIS"] = strengthText.text ?? ""
+        customCharacter?.abilityScore["CHA"] = strengthText.text ?? ""
+        
+        customCharacter?.abilities = abilitiesText.text ?? ""
+        customCharacter?.actions = actionsText.text ?? ""
+        customCharacter?.legendaryActions = legendaryActionsText.text ?? ""
+        customCharacter?.lairActions = lairActionsText.text ?? ""
+
+    }
     
 }
 
