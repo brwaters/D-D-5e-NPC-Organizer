@@ -29,6 +29,10 @@ class TableViewController: UITableViewController {
             os_log("Cannot save in %@", log: OSLog.default, type: .debug, CharacterItem.archiveURL.path) }
     }
     
+    func loadItems() -> [CharacterItem]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: CharacterItem.archiveURL.path) as? [CharacterItem]
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -42,9 +46,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
         // Configure the cell...
-        //cell.imageView =
-        //cell.contentView.te = "Testing"
-        //cell.detailTextLabel = "another test"
+        let item = characterContainer[indexPath.row]
+        cell.imageView?.image = item.image
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = item.characterDescription
         return cell
     }
     
