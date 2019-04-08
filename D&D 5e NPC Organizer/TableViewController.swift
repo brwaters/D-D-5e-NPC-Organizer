@@ -10,6 +10,8 @@ import UIKit
 import os
 
 class TableViewController: UITableViewController {
+    
+    // Provides View for TableView. Loads and saves characters into collection of characters. Sends index of cell selected by conditional in prepare fucntion to segue to be picked up by DetailView for rendering character to user.
 
     var characterContainer = [CharacterItem]();
     
@@ -21,6 +23,10 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "Background"))
+        if let savedCharacters = loadItems() {
+            characterContainer += savedCharacters
+        }
     }
 
     // MARK: - Table view data source
@@ -68,6 +74,14 @@ class TableViewController: UITableViewController {
             saveItems()
         }
     }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            // Delete the row from the data source
+            characterContainer.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            saveItems()
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -103,14 +117,25 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "viewDetail" {
+            guard let selectedTableViewCell = sender as? UITableViewCell else {
+                fatalError("Couldn't get sender.")
+            }
+            guard let selectedCellIndexPath = tableView.indexPath(for: selectedTableViewCell) else {
+                fatalError("Couldn't get indexPath of selected cell")
+            }
+            if let nextViewController = segue.destination as? DetailViewController {
+                nextViewController.selectedCharacter = characterContainer[selectedCellIndexPath.row]
+                //Or pass any values
+            }
+        }
     }
-    */
 
 }

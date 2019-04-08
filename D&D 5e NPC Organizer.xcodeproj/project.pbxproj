@@ -10,6 +10,7 @@
 		DA54593C224072DA0046DD95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54593B224072DA0046DD95 /* TableViewController.swift */; };
 		DA58E5D9222A284500549C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5D8222A284500549C24 /* AppDelegate.swift */; };
 		DA58E5DB222A284500549C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E5DA222A284500549C24 /* ViewController.swift */; };
+		DAE0DCA8225858E7009D63C7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0DCA7225858E7009D63C7 /* DetailViewController.swift */; };
 		DAE7357722458AF300727336 /* CharacterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7357622458AF300727336 /* CharacterItem.swift */; };
 		DAE7358D2245903A00727336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E5DC222A284500549C24 /* Main.storyboard */; };
 		DAE7358E2245904000727336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E5E1222A284A00549C24 /* LaunchScreen.storyboard */; };
@@ -25,6 +26,7 @@
 		DA58E5DF222A284A00549C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA58E5E2222A284A00549C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA58E5E4222A284A00549C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE0DCA7225858E7009D63C7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DAE7357622458AF300727336 /* CharacterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				DA58E5E1222A284A00549C24 /* LaunchScreen.storyboard */,
 				DA58E5E4222A284A00549C24 /* Info.plist */,
 				DAE7357622458AF300727336 /* CharacterItem.swift */,
+				DAE0DCA7225858E7009D63C7 /* DetailViewController.swift */,
 			);
 			path = "D&D 5e NPC Organizer";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				DA58E5DB222A284500549C24 /* ViewController.swift in Sources */,
 				DAE7357722458AF300727336 /* CharacterItem.swift in Sources */,
+				DAE0DCA8225858E7009D63C7 /* DetailViewController.swift in Sources */,
 				DA58E5D9222A284500549C24 /* AppDelegate.swift in Sources */,
 				DA54593C224072DA0046DD95 /* TableViewController.swift in Sources */,
 			);

@@ -9,7 +9,9 @@
 import UIKit
 import os
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class   ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    //This ViewController controls the EditView. Instantiates a character and renders it. Then has a prepare function that captures user entered data and passes it the the segue to be picked up the the TableViewController.
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +41,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         sensesText.text = defaultCharacter.senses
         miscellaneousText.text = defaultCharacter.miscellaneous
         
-        strengthText.text = defaultCharacter.abilityScore["STR"]
-        dexterityText.text = defaultCharacter.abilityScore["DEX"]
-        constitutionText.text = defaultCharacter.abilityScore["CON"]
-        intellectText.text = defaultCharacter.abilityScore["INT"]
-        wisdomText.text = defaultCharacter.abilityScore["WIS"]
-        charismaText.text = defaultCharacter.abilityScore["CHA"]
+        strText.text = defaultCharacter.abilityScore["STR"]
+        dexText.text = defaultCharacter.abilityScore["DEX"]
+        conText.text = defaultCharacter.abilityScore["CON"]
+        intText.text = defaultCharacter.abilityScore["INT"]
+        wisText.text = defaultCharacter.abilityScore["WIS"]
+        chaText.text = defaultCharacter.abilityScore["CHA"]
         
         abilitiesText.text = defaultCharacter.abilities
         
@@ -92,7 +94,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var characterAvatar: UIImageView!
     @IBOutlet weak var nameText: UITextView!
     @IBOutlet weak var characteristicsText: UITextView!
-    @IBOutlet weak var alignmentText: UITextView!
+    @IBOutlet weak var alignmentText: UITextField!
     
     @IBOutlet weak var armorClassText: UITextField!
     @IBOutlet weak var hitPointsText: UITextField!
@@ -106,12 +108,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var sensesText: UITextField!
     @IBOutlet weak var miscellaneousText: UITextField!
     
-    @IBOutlet weak var strengthText: UITextView!
-    @IBOutlet weak var dexterityText: UITextView!
-    @IBOutlet weak var constitutionText: UITextView!
-    @IBOutlet weak var intellectText: UITextView!
-    @IBOutlet weak var wisdomText: UITextView!
-    @IBOutlet weak var charismaText: UITextView!
+    @IBOutlet weak var strText: UITextField!
+    @IBOutlet weak var dexText: UITextField!
+    @IBOutlet weak var conText: UITextField!
+    @IBOutlet weak var intText: UITextField!
+    @IBOutlet weak var wisText: UITextField!
+    @IBOutlet weak var chaText: UITextField!
     
     @IBOutlet weak var abilitiesText: UITextView!
     @IBOutlet weak var actionsText: UITextView!
@@ -120,10 +122,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard let button = sender as? UIBarButtonItem, button === saveButton
-        else {
-            return
-        }
+//        guard let button = sender as? UIBarButtonItem, button === saveButton
+//        else {
+//            return
+//        }
+        
         customCharacter = CharacterItem.init(image: characterAvatar.image ?? #imageLiteral(resourceName: "Character Silhouette") , name: nameText.text, description: characteristicsText.text)
         
         customCharacter?.alignment = alignmentText.text ?? ""
@@ -139,19 +142,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         customCharacter?.senses = sensesText.text ?? ""
         customCharacter?.miscellaneous = miscellaneousText.text ?? ""
         
-        customCharacter?.abilityScore["STR"] = strengthText.text ?? ""
-        customCharacter?.abilityScore["DEX"] = strengthText.text ?? ""
-        customCharacter?.abilityScore["CON"] = strengthText.text ?? ""
-        customCharacter?.abilityScore["INT"] = strengthText.text ?? ""
-        customCharacter?.abilityScore["WIS"] = strengthText.text ?? ""
-        customCharacter?.abilityScore["CHA"] = strengthText.text ?? ""
+        customCharacter?.abilityScore["STR"] = strText.text ?? ""
+        customCharacter?.abilityScore["DEX"] = dexText.text ?? ""
+        customCharacter?.abilityScore["CON"] = conText.text ?? ""
+        customCharacter?.abilityScore["INT"] = intText.text ?? ""
+        customCharacter?.abilityScore["WIS"] = wisText.text ?? ""
+        customCharacter?.abilityScore["CHA"] = chaText.text ?? ""
         
         customCharacter?.abilities = abilitiesText.text ?? ""
         customCharacter?.actions = actionsText.text ?? ""
         customCharacter?.legendaryActions = legendaryActionsText.text ?? ""
         customCharacter?.lairActions = lairActionsText.text ?? ""
-
     }
-    
 }
-
