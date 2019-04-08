@@ -9,17 +9,21 @@
 import UIKit
 import os
 
-class   ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //This ViewController controls the EditView. Instantiates a character and renders it. Then has a prepare function that captures user entered data and passes it the the segue to be picked up the the TableViewController.
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        setupDefaultCharacter()
-        
+        if (customCharacter == nil) {
+            setupDefaultCharacter()
+        } else {
+            fetchEditableCharacter()
+        }
+        //        fetchEditableCharacter()
     }
-
+    
     var customCharacter: CharacterItem?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -57,6 +61,38 @@ class   ViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         lairActionsText.text = defaultCharacter.lairActions
     }
     
+    func fetchEditableCharacter() {
+        nameText.text = customCharacter?.name
+        characteristicsText.text = customCharacter?.characterDescription
+        alignmentText.text = customCharacter?.alignment
+        armorClassText.text = customCharacter?.armorClass
+        hitPointsText.text  = customCharacter?.hitPoints
+        speedText.text = customCharacter?.speed
+        challengeRatingText.text = customCharacter?.challengeRating
+        languagesText.text = customCharacter?.languages
+        savingThrowsText.text = customCharacter?.savingThrows
+        skillsText.text = customCharacter?.skills
+        damageResistanceText.text = customCharacter?.damageResistance
+        damageVulnerabilitiesText.text = customCharacter?.damageVulnerability
+        sensesText.text = customCharacter?.senses
+        miscellaneousText.text = customCharacter?.miscellaneous
+        
+        strText.text = customCharacter?.abilityScore["STR"]
+        dexText.text = customCharacter?.abilityScore["DEX"]
+        conText.text = customCharacter?.abilityScore["CON"]
+        intText.text = customCharacter?.abilityScore["INT"]
+        wisText.text = customCharacter?.abilityScore["WIS"]
+        chaText.text = customCharacter?.abilityScore["CHA"]
+        
+        abilitiesText.text = customCharacter?.abilities
+        
+        actionsText.text = customCharacter?.actions
+        
+        legendaryActionsText.text = customCharacter?.legendaryActions
+        
+        lairActionsText.text = customCharacter?.lairActions
+    }
+    
     
     @IBAction func imagePick(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
@@ -87,7 +123,6 @@ class   ViewController: UIViewController, UIImagePickerControllerDelegate, UINav
             // Edit
             owningNavigationController.popViewController(animated: true)
         }
-
     }
     
     
@@ -122,10 +157,6 @@ class   ViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-//        guard let button = sender as? UIBarButtonItem, button === saveButton
-//        else {
-//            return
-//        }
         
         customCharacter = CharacterItem.init(image: characterAvatar.image ?? #imageLiteral(resourceName: "Character Silhouette") , name: nameText.text, description: characteristicsText.text)
         
